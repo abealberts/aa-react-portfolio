@@ -31,7 +31,7 @@ export default function ContactForm() {
         }
     };
 
-    //Updates email field with error if invalid
+    //Updates email field with error if invalid - used to render invalid email warning
     const handleEmailValidation = (e) => {
         if (!validateEmail(e)) {
             setValidEmail(false);
@@ -64,71 +64,74 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <div className="field">
-                <label className="label">Name</label>
-                <div className="control">
-                    <input
-                    value={name}
-                    name="name"
-                    onChange={handleInputChange}
-                    className="input"
-                    type="text"
-                    placeholder="Please enter your full name"
-                    />
-                </div>
-            </div>
-            {validEmail ? (
+        <div className="mb-4">
+            <form onSubmit={handleFormSubmit}>
                 <div className="field">
-                    <label className="label">Email</label>
+                    <label className="label">Name</label>
                     <div className="control">
                         <input
-                        value={email}
-                        name="email"
+                        value={name}
+                        name="name"
                         onChange={handleInputChange}
                         className="input"
-                        type="email"
-                        placeholder="Please enter your email address"
+                        type="text"
+                        placeholder="Please enter your full name"
                         />
                     </div>
                 </div>
-            ) : (
+                {validEmail ? (
+                    <div className="field">
+                        <label className="label">Email</label>
+                        <div className="control">
+                            <input
+                            value={email}
+                            name="email"
+                            onChange={handleInputChange}
+                            className="input"
+                            type="email"
+                            placeholder="Please enter your email address"
+                            />
+                        </div>
+                    </div>
+                ) : (
+                    <div className="field">
+                        <label className="label">Email</label>
+                        <div className="control has-icons-right">
+                            <input
+                            value={email}
+                            name="email"
+                            onChange={handleInputChange}
+                            className="input is-danger"
+                            type="email"
+                            placeholder="Please enter your email address"
+                            />
+                        </div>
+                        <p className="help is-danger">This email is invalid</p>
+                    </div>
+                )}
                 <div className="field">
-                    <label className="label">Email</label>
-                    <div className="control has-icons-right">
-                        <input
-                        value={email}
-                        name="email"
+                    <label className="label">Message</label>
+                    <div className="control">
+                        <textarea
+                        value={message}
+                        name="message"
                         onChange={handleInputChange}
-                        className="input is-danger"
-                        type="email"
-                        placeholder="Please enter your email address"
+                        className="textarea"
+                        placeholder="Please enter your message"
                         />
                     </div>
-                    <p className="help is-danger">This email is invalid</p>
                 </div>
-            )}
-            <div className="field">
-                <label className="label">Message</label>
+                {error ? (
+                <div className="notification is-warning">{error}</div>
+                ) : (<div></div>)}
+                {success ? (
+                <div className="notification is-success">{success}</div>
+                ) : (<div></div>)}
                 <div className="control">
-                    <textarea
-                    value={message}
-                    name="message"
-                    onChange={handleInputChange}
-                    className="textarea"
-                    placeholder="Please enter your message"
-                    />
+                    <button className="button is-primary">Submit</button>
                 </div>
-            </div>
-            {error ? (
-            <div className="notification is-warning">{error}</div>
-            ) : (<div></div>)}
-            {success ? (
-            <div className="notification is-success">{success}</div>
-            ) : (<div></div>)}
-            <div className="control">
-                <button className="button is-primary">Submit</button>
-            </div>
-        </form>
+            </form>
+        </div>
+        
     );
   }

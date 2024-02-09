@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bulma/css/bulma.min.css';
+import './custom.css';
 import App from './App.jsx';
 import ErrorPage from './pages/ErrorPage';
 import ResumePage from './pages/ResumePage';
