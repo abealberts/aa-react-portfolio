@@ -16,26 +16,30 @@ export default function Nav() {
                 [
                     <li
                     className={active === 'about' ? 'is-active' : ''}
-                    onClick={() => setTab('about')}>
-                        <Link key={1} to="/">About Me</Link>
+                    onClick={() => setTab('about')}
+                    key={1}>
+                        <Link to="/">About Me</Link>
                     </li>,
 
                     <li
                     className={active === 'projects' ? 'is-active' : ''}
-                    onClick={() => setTab('projects')}>
-                        <Link key={2} to="/projects">Projects</Link>
+                    onClick={() => setTab('projects')}
+                    key={2}>
+                        <Link to="/projects">Projects</Link>
                     </li>,
 
                     <li
                     className={active === 'contact' ? 'is-active' : ''}
-                    onClick={() => setTab('contact')}>
-                        <Link key={3} to="/contact">Contact</Link>
+                    onClick={() => setTab('contact')}
+                    key={3}>
+                        <Link to="/contact">Contact</Link>
                     </li>,
 
                     <li
                     className={active === 'resume' ? 'is-active' : ''}
-                    onClick={() => setTab('resume')}>
-                        <Link key={4} to="/resume">Resume</Link>
+                    onClick={() => setTab('resume')}
+                    key={4}>
+                        <Link to="/resume">Resume</Link>
                     </li>
                 ]
             }
