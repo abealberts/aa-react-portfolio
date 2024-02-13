@@ -1,8 +1,23 @@
-# React + Vite
+# AA-React-Porfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a simple front-end portfolio using React:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- I created this portfolio to showcase my dev projects and allows interested parties to learn more about me/find me on other platforms.
+- I feel it is important to utilize my own knowledge of development tools (React, for example) to build the platform I showcase my work on. A portfolio page like this is often a first impression to an employer/client. Therefore, it should make a positive impact/be impressive.
+- I would like to further develop this project stylistically and functionally, as I can certainly make it more impressive and fleshed out with more time. Ideally, I will hook it up to a DB as well to store things like project information and form submissions.
+
+## Usage
+
+### [Visit my portfolio by clicking this link!](https://main--ephemeral-granita-96fbc6.netlify.app/projects)
+
+![Portfolio Screenshot](./src/assets/aa-reactportfolio-sc.png)
+
+## Credits
+
+- UofW Bootcamp Repo referenced React Router set up & some functionality
+
+## License
+
+MIT
