@@ -10,7 +10,7 @@ This project is a simple front-end portfolio using React:
 
 ## Usage
 
-### [Visit my portfolio by clicking this link!](https://main--ephemeral-granita-96fbc6.netlify.app/projects)
+### [Visit my portfolio by clicking this link!](https://main--ephemeral-granita-96fbc6.netlify.app/)
 
 ![Portfolio Screenshot](./src/assets/aa-reactportfolio-sc.png)
 
