@@ -1,6 +1,6 @@
 export default function Navbar({ links }) {
     return (
-        <div className="tabs is-centered">
+        <div className="tabs">
             <ul>
                 {links.map((link) => link)}
             </ul>

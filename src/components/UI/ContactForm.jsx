@@ -128,7 +128,7 @@ export default function ContactForm() {
                 <div className="notification is-success">{success}</div>
                 ) : (<div></div>)}
                 <div className="control">
-                    <button className="button is-primary">Submit</button>
+                    <button className="button is-link">Submit</button>
                 </div>
             </form>
         </div>
